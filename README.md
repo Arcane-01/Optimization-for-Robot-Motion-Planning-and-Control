@@ -15,7 +15,7 @@ conda activate irsim_env
 
 ---
 
-### 2. Install IR-Sim
+### 2. Install [IR-SIM](https://github.com/hanruihua/ir-sim)
 
 ```bash
 pip install ir-sim[all]
