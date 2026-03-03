@@ -25,7 +25,7 @@ class Planner():
 		curve_radius = 2.0 
 		local_traj[:, 1] = curve_radius * np.sin(local_traj[:, 0] / curve_radius)
 		## ----------------------
-		
-		v = jnp.array([[0.5],[0.0]])
 
-		return v, local_traj
+		v = jnp.array([[0.5],[0.0]]) # (v_x, Omega)
+
+		return v, local_traj # (N, 2)

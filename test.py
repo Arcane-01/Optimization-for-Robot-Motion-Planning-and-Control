@@ -6,13 +6,8 @@ from planner import *
 
 
 import numpy as np
-import jax.numpy as jnp
-import matplotlib.pyplot as plt
-from jax import jit, random, vmap
-import jax
-from functools import partial
 
-env = irsim.make('robot_world.yaml') 
+env = irsim.make('obstacle_world.yaml') 
 robot_info = env.get_robot_info()
 planner = Planner(env.step_time)
 vel_init = np.zeros(2)
@@ -34,7 +29,16 @@ for i in range(300):
 	
 	velocity = np.array(velocity)
 
-	## -- Optimal Trajectory plotting--
+	## -- For Dynamic Obstacles --
+	# obs_list = env.get_obstacle_info_list()
+	# centers, velocities, radii = extract_dynamic_circle_obs_info(obs_list)
+	# print("Number of Obstacles:", len(obs_list))
+	# print("\nCenters:\n", centers)
+	# print("\nVelocities:\n", velocities)
+	# print("\nRadii:\n", radii)
+	## ----------------------------
+
+	## -- Optimal Trajectory plotting --
 	robot_state = env.robot.state.flatten()
 	traj_global = local_to_global(robot_state, optimal_traj)
 	if traj_line is not None:

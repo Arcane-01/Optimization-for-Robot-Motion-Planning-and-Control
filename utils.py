@@ -57,3 +57,17 @@ def local_to_global(robot_state, traj_local):
 	traj_theta = np.zeros((traj_local.shape[0], 1))
 	traj_global = np.hstack([traj_xy_global, traj_theta])
 	return traj_global
+
+def extract_dynamic_circle_obs_info(obs_list):
+    num_obs = len(obs_list)
+    centers = np.zeros((num_obs, 2))
+    velocities = np.zeros((num_obs, 2))
+    radii = np.zeros(num_obs)
+
+    for i, obs in enumerate(obs_list):
+        if obs.cone_type != "norm2":
+            raise ValueError("All obstacles must be circular (cone_type='norm2')")
+        centers[i, :] = obs.center.flatten()
+        velocities[i, :] = obs.velocity.flatten()
+        radii[i] = obs.radius
+    return centers, velocities, radii
