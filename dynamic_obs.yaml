@@ -11,7 +11,7 @@ robot:
   - kinematics: {name: 'diff'} 
     shape: {name: 'circle', radius: 0.2}  
     state: [10, 20, 0]  # x, y, theta (radians)
-    goal: [40, 40, 0]   # x, y, theta (radians)
+    goal: [28, 20, 0]   # x, y, theta (radians)
     vel_min: [-2, -2]
     vel_max: [2, 2]
     goal_threshold: 0.3

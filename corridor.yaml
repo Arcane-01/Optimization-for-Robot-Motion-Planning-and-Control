@@ -11,7 +11,7 @@ robot:
   - kinematics: {name: 'diff'} 
     shape: {name: 'circle', radius: 0.2}  
     state: [0, 20, 0]  # x, y, theta (radians)
-    goal: [6, 20, 0]   # x, y, theta (radians)
+    goal: [55, 20, 0]   # x, y, theta (radians)
     vel_min: [-2, -2]
     vel_max: [2, 2]
     goal_threshold: 0.3
@@ -22,7 +22,7 @@ robot:
     sensors: 
       - type: 'lidar2d'
         range_min: 0
-        range_max: 5
+        range_max: 10
         angle_range: 6.2831852
         number: 200
         noise: False
