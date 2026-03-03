@@ -38,10 +38,23 @@ Install JAX depending on your system configuration.
 
 ## Running the Script
 
+Clone the repository:
+
+```bash
+git clone git@github.com:Arcane-01/Optimization-for-Robot-Motion-Planning-and-Control.git opt_irsim
+```
+Navigate to the project directory:
+
+```bash
+cd opt_irsim
+```
+Run the script:
+
 ```bash
 python3 test.py
 ```
 ---
+
 
 ## Note
 
