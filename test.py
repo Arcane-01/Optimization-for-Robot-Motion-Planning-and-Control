@@ -7,7 +7,7 @@ from planner import *
 
 import numpy as np
 
-env = irsim.make('obstacle_world.yaml') 
+env = irsim.make('obstacle_world.yaml', save_ani=True) 
 robot_info = env.get_robot_info()
 planner = Planner(env.step_time)
 vel_init = np.zeros(2)
@@ -52,4 +52,4 @@ for i in range(300):
 
 	if env.done(): break 
 
-env.end() 
+env.end(ending_time=0) 
