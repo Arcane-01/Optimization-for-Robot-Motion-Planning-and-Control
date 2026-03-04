@@ -52,4 +52,4 @@ for i in range(300):
 
 	if env.done(): break 
 
-env.end(ending_time=0) 
+env.end(ending_time=3) 
