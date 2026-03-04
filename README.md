@@ -3,6 +3,12 @@
 Repository associated with the course **Optimization for Robot Motion Planning and Control (LOTI.05.095)**
 
 ---
+## Run in Google Colab
+
+This project can also be executed in Google Colab without local setup
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Arcane-01/Optimization-for-Robot-Motion-Planning-and-Control/blob/ir_sim/colab/colab_run.ipynb)
+
 
 ## Installation Guide
 
