@@ -74,3 +74,18 @@ python3 test.py
 Change `'obstacle_world.yaml'` to any other available world configuration file.
 
 * Implement your planner inside `planner.py`.
+
+> The current version of ir-sim has a bug where yellow arrows are displayed by default for static obstacles ([#312](https://github.com/hanruihua/ir-sim/issues/312)). Until it's fixed in an upcoming release, you can disable them by setting `show_arrow: False` in the obstacle's `plot` config:
+>
+> ```yaml
+> obstacle:
+>   - number: 200
+>     distribution: {name: manual}
+>     shape:
+>       - {name: circle, radius: 0.075}
+>     plot:
+>       show_arrow: False
+>     state:
+>       - [-0.075, 0.075]
+>       - [-0.225, 0.075]
+> ```
